@@ -1,0 +1,769 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Aligns header content to opposite ends */
+}
+
+#lds {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    margin: 0;
+    padding: 10px;
+    /* Adjust padding to move heading closer to nav */
+    padding-left: 18rem;
+    padding-right: 0;
+    /* Reduce space on the right of the heading text */
+}
+
+.top-nav nav {
+    display: flex;
+    gap: 200px;
+    /* Space between the two <ul> elements */
+}
+
+.top-nav ul {
+    list-style: none;
+    /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 75px;
+    padding-right: 20rem;
+    /* Space between <li> items */
+}
+
+.top-nav li {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Remove extra padding */
+}
+
+#sum {
+    font-size: 25px;
+    padding-left: -10px;
+}
+
+#summ {
+    font-size: 25px;
+}
+
+/* Base link styles */
+/* Base link styles */
+a:link {
+    color: black;
+    /* Default link color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+/* Visited link styles */
+a:visited {
+    color: black;
+    /* Visited link color */
+}
+
+/* Hover link styles */
+.nuhuh a:hover {
+    color: gray;
+    /* Color when hovering */
+    text-decoration: underline;
+    /* Optional underline on hover */
+    animation: shake 0.5s ease;
+    /* Apply shaking animation */
+}
+
+/* Active link styles */
+a:active {
+    color: darkgray;
+    /* Color when active (clicked) */
+}
+
+/* Keyframes for shaking and tilting effect */
+@keyframes shake {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        /* No transform at the start */
+    }
+
+    25% {
+        transform: translateX(-3px) rotate(-10deg);
+        /* Tilt left and shake */
+    }
+
+    50% {
+        transform: translateX(3px) rotate(10deg);
+        /* Tilt right and shake */
+    }
+
+    75% {
+        transform: translateX(-3px) rotate(-10deg);
+        /* Tilt left and shake */
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        /* Return to original position */
+    }
+}
+
+/* Base styles for list items */
+.top-nav li {
+    position: relative;
+    /* Needed to position the pseudo-element */
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    /* Remove underline by default */
+    padding-bottom: 5px;
+    /* Add space below the text for the underline */
+}
+
+/* Custom underline effect */
+.top-nav li::after {
+    content: "";
+    /* Required for the pseudo-element */
+    position: absolute;
+    /* Position it relative to the <li> */
+    left: 0;
+    /* Align to the left of the <li> */
+    bottom: 0;
+    /* Position it at the bottom */
+    width: 100%;
+    /* Full width of the <li> */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: gray;
+    /* Color of the underline */
+    transform: scaleX(0);
+    /* Start with no underline visible */
+    transform-origin: bottom right;
+    /* Scale from the right side */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the underline */
+}
+
+/* Hover effect for list items */
+.top-nav li:hover::after {
+    transform: scaleX(1);
+
+    /* Scale to full width on hover */
+}
+
+.top-nav li:hover {
+    transform: translateX(5px);
+    color: gray;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Container for the entire section */
+.main-sec {
+    display: flex;
+    /* Align children horizontally */
+    flex-direction: column;
+    /* Stack items vertically */
+    gap: 2rem;
+    /* Space between flex items */
+}
+
+/* Container for text and image */
+.text-image-container {
+    display: flex;
+    /* Align text and image horizontally */
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 2rem;
+    /* Space between text and image */
+}
+
+/* Image positioning */
+.image-wrapper {
+    display: flex;
+    /* Ensure image container aligns correctly */
+    justify-content: center;
+    /* Center the image horizontally if needed */
+    margin-top: 2rem;
+    /* Move image down */
+}
+
+#blu {
+    max-width: 100%;
+    /* Ensure the image scales properly */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-top: 6rem;
+    padding-left: 20rem;
+}
+
+/* Button styling remains the same */
+.button-shop {
+    margin-top: -10rem;
+    /* Position the button below the text */
+}
+
+
+/* Adjust the h5 element to be closer to the h1 element */
+/* Adjust the h5 element to be closer to the h1 element */
+h5 {
+    padding-left: 27rem;
+    /* Adjust padding-left as needed */
+    margin-top: 12rem;
+    /* Remove top margin to reduce space from h1 */
+    margin-bottom: 0.2rem;
+    /* Add a bit of space between h5 and h1 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: larger;
+}
+
+/* Adjust the h1 element to be in two lines */
+/* Adjust h1 element */
+h1 {
+    padding-left: 27rem;
+    /* Same as before */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5rem;
+    line-height: 1.2;
+    /* Adjust line-height for spacing between lines */
+    margin: 0;
+    /* Remove default margins */
+    margin-bottom: 1rem;
+    /* Reduce bottom margin to move h5 closer */
+}
+
+/* Adjust the new h5 element */
+h5.new {
+    padding-left: 27rem;
+    /* Same as before */
+    margin-top: 2rem;
+    /* Remove top margin to bring it closer to h1 */
+    margin-bottom: 0;
+    /* Remove bottom margin if needed */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: larger;
+}
+
+/* Ensure h1 breaks into two lines correctly */
+h1 span {
+    display: block;
+    /* Makes sure each span is on a new line */
+}
+
+#h5 {
+    margin-bottom: 0.3rem;
+}
+
+button {
+    padding: 10px;
+    margin-top: 0rem;
+    margin-left: 27rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#arrow {
+    padding-left: 7px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #fafafa;
+    color: black;
+    outline: auto;
+    transition: 0.3s ease;
+
+}
+
+button:active {
+    background-color: #b6b6b6;
+}
+
+#sell {
+    font-size: 45px;
+    text-align: center;
+    padding-right: 30rem;
+}
+
+#first {
+    padding-left: 0.6rem;
+    padding-top: 2rem;
+}
+
+.stars {
+    padding-left: 0.7em;
+}
+
+#dior {
+    background-color: #eeeeee;
+    border-radius: 20px;
+    width: 375px;
+}
+
+.row {
+    margin-left: 8rem;
+}
+
+.stars {
+    color: rgba(209, 209, 49, 0.808);
+}
+
+#dior:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    /* Align children in a row */
+    gap: 2rem;
+    /* Space between items, adjust as needed */
+    justify-content: flex-start;
+    /* Align items to the left */
+    margin-left: 2rem;
+    /* Adjust this value to move the row to the left */
+}
+
+.row-img {
+    display: flex;
+    /* Align items inside each .row-img container vertically */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally within the .row-img container */
+    text-align: center;
+    /* Center-align text */
+    margin-left: 16rem;
+    /* Adjust this value to move individual items to the left */
+}
+
+.row-img img {
+    background-color: #eeeeee;
+    border-radius: 20px;
+    width: 375px;
+    /* Ensure images are the same width */
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    /* Smooth scaling on hover */
+}
+
+.row-img img:hover {
+    transform: scale(1.1);
+    /* Scale up image on hover */
+}
+
+.row-img h3 {
+    padding-top: 1rem;
+    margin: 0;
+    /* Remove default margin */
+}
+
+.stars {
+    color: rgba(209, 209, 49, 0.808);
+    padding-top: 0.5rem;
+    /* Space between stars and text */
+}
+
+#creed {
+    padding-bottom: 3rem;
+    padding-top: 0.4rem;
+}
+
+#creed:hover {
+    cursor: pointer;
+}
+
+#second {
+    padding-top: 2rem;
+}
+
+#ver {
+    height: 435px;
+}
+
+#third {
+    padding-top: 2rem;
+}
+
+#ver:hover {
+    cursor: pointer;
+
+}
+
+h2 {
+    font-size: medium;
+    padding-bottom: 1rem;
+}
+
+/* New button for Shop All */
+/* Container for the Shop All button */
+.shop-all-container {
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    margin: 3rem 0;
+    /* Space above and below the button */
+}
+
+/* Styling for the Shop All button */
+.shop-all-button {
+
+    background-color: white;
+    /* Button background color */
+    color: black;
+    /* Button text color */
+    border: none;
+    /* Remove default border */
+    border-radius: 60px;
+    /* Make button round */
+    width: 150px;
+    /* Set button width */
+    height: 50px;
+    /* Set button height */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Font family */
+    font-size: 16px;
+    /* Font size */
+    font-weight: lighter;
+    /* Font weight */
+    display: flex;
+    /* Use flexbox for centering text */
+    align-items: center;
+    /* Center text vertically */
+    justify-content: center;
+    /* Center text horizontally */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    outline: auto;
+
+    margin-right: 29rem;
+}
+
+.shop-all-button:hover {
+    background-color: black;
+    /* Button background color on hover */
+    color: white;
+    /* Button text color on hover */
+}
+
+.shop-all-button:active {
+    background-color: rgb(131, 131, 131);
+}
+
+.delivery {
+    text-align: center;
+    background: #f7c08a;
+    padding: 20px;
+    /* Background color of the box */
+    /* Text color */
+    width: 1000px;
+    /* Set a specific width for the box */
+    /* Add some padding inside the box */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: shadow effect */
+    /* Center text inside the box */
+    margin-left: 39rem;
+}
+
+#summm {
+    font-size: 35px;
+}
+
+.shipping {
+    text-align: center;
+    padding: 20px;
+    /* Background color of the box */
+    /* Text color */
+    width: 1000px;
+    /* Set a specific width for the box */
+    /* Add some padding inside the box */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: shadow effect */
+    /* Center text inside the box */
+    margin-left: 39rem;
+}
+
+#summmm {
+    font-size: 35px;
+}
+
+.return {
+    text-align: center;
+    background-color: #f7c08a;
+    padding: 20px;
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: shadow effect */
+    /* Center text inside the box */
+    margin-left: 39rem;
+}
+
+#summmmm {
+    font-size: 35px;
+}
+
+.return:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.shipping:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.delivery:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#sul {
+    padding-bottom: 3.8rem;
+}
+
+#sul:hover {
+    cursor: pointer;
+}
+
+.shop-all-container-1 {
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    margin: 3rem 0;
+    /* Space above and below the button */
+}
+
+/* Styling for the Shop All button */
+.shop-all-button-1 {
+
+    background-color: black;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove default border */
+    border-radius: 60px;
+    /* Make button round */
+    width: 150px;
+    /* Set button width */
+    height: 50px;
+    /* Set button height */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Font family */
+    font-size: 16px;
+    /* Font size */
+    font-weight: lighter;
+    /* Font weight */
+    display: flex;
+    /* Use flexbox for centering text */
+    align-items: center;
+    /* Center text vertically */
+    justify-content: center;
+    /* Center text horizontally */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    outline: auto;
+
+    margin-right: 29rem;
+}
+
+.shop-all-button-1:hover {
+    background-color: white;
+    /* Button background color on hover */
+    color: black;
+    /* Button text color on hover */
+}
+
+.shop-all-button-1:active {
+    background-color: rgb(131, 131, 131);
+}
+
+#h22 {
+    font-size: xx-large;
+    margin-left: 5rem;
+    padding-bottom: 0;
+}
+
+.email {
+    text-align: left;
+    background-color: black;
+    color: white;
+    outline: auto;
+    padding: 20px;
+    width: 1300px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 30rem;
+}
+
+#p22 {
+    margin-left: 5rem;
+}
+
+.email {
+    text-align: center;
+}
+
+.signup-form {
+    margin-top: 20px;
+}
+
+.signup-form input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    /* Adjust width as needed */
+}
+
+.signup-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    /* Adjust color as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.signup-form button:hover {
+    background-color: #f7c08a;
+    transform: translateX(5px);
+    /* Adjust color as needed */
+}
+
+.signup-form button:active {
+    background: #f8ddc1;
+}
+
+.social {
+    padding-left: 100rem;
+}
+
+.in {
+    font-size: x-large;
+    gap: 20px;
+}
+
+#twit {
+    padding: 30px;
+}
+
+#thisH3 {
+    padding-left: 2.5rem;
+}
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    /* Center the footer content */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    /* Center align the sections horizontally */
+    gap: 2rem;
+    /* Adjust the spacing between sections */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    max-width: 1200px;
+    /* Limit the maximum width */
+    width: 100%;
+    /* Ensure the content takes full width */
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 200px;
+    /* Limit the width of each section */
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.15s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #007BFF;
+}
+
+.social-links a {
+    margin-right: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007BFF;
+}
+
+#sell {
+    text-align: left;
+    padding-left: 19rem;
+}
